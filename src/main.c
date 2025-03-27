@@ -124,25 +124,25 @@ void test_quad_words() {
 	p1 = calloc(8, 2);
 	p2 = calloc(8, 2);
 
-	p1[0] = 1L << 16L;
+	p1[0] = 1LL << 16LL;
 	p2[0] = 32L;
-	p1[1] = 1L << 32L;
+	p1[1] = 1LL << 32LL;
 	p2[1] = 10L;
 
 	printf("PTR SIZE: %zu\n", sizeof(p1));
 
 	puts("====ARRAYS====");
 	fputs("p1: ", stdout);
-	PRINT_ARR(p1, int64_t, 2, "ld");
+	PRINT_ARR(p1, int64_t, 2, "lld");
 
 	fputs("p2: ", stdout);
-	PRINT_ARR(p2, int64_t, 2, "ld");
+	PRINT_ARR(p2, int64_t, 2, "lld");
 
 	// Call assembly function
 	__add_values_qw_sse2(p1, p2);
 	puts("====RESULT====");
 	fputs("p1: ", stdout);
-	PRINT_ARR(p1, int64_t, 2, "ld");
+	PRINT_ARR(p1, int64_t, 2, "lld");
 }
 
 void (*tests[4])() = {

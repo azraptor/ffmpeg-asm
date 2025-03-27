@@ -21,7 +21,7 @@ This should work on both Linux and Windows.
 
 Install nasm, a C compiler, and cmake. Then open up a terminal.
 
-Create a new directory and enter into it by running `build` and `cd build`.
+Create a new directory and enter into it by running `mkdir build` and `cd build`.
 
 Run `cmake ..` to generate build files.
 
@@ -29,5 +29,5 @@ Build program by running `cmake --build .`
 
 Run the program like so `./vec_test`
 
-
+<br>
 More shall be added at some point.

@@ -11,7 +11,7 @@ else()
 	target_compile_options(sse2 INTERFACE -msse2)
 endif()
 
-string(APPEND CMAKE_ASM_NASM_FLAGS "-DARCH_X86_64=1 -Dprivate_prefix=_")
+string(APPEND CMAKE_ASM_NASM_FLAGS "-DARCH_X86_64=1 -Dprivate_prefix=_ ")
 
 if(WIN32)
 	string(APPEND CMAKE_ASM_NASM_FLAGS "-DWIN64=1")
