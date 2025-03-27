@@ -5,7 +5,7 @@ OUT := build
 AS := nasm
 AFLAGS := -g -i$(ASM_DIR) -DARCH_X86_64=1 -Dprivate_prefix=_ -felf64
 CC := gcc
-CFLAGS := -g -m64 -msse2 -DTEST2
+CFLAGS := -g -m64 -msse2 -DTESTS
 
 all: main
 
