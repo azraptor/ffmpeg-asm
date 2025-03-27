@@ -1,11 +1,13 @@
 SRC := src
 ASM_DIR := $(SRC)/asm
-OUT := build
+INC_DIR := include
+OUT := out
 
 AS := nasm
-AFLAGS := -g -i$(ASM_DIR) -DARCH_X86_64=1 -Dprivate_prefix=_ -felf64
+AFLAGS := -i$(ASM_DIR) -DARCH_X86_64=1 -Dprivate_prefix=_ -felf64 -g
 CC := gcc
-CFLAGS := -g -m64 -msse2 -DTESTS
+CFLAGS := -g -m64 -msse2 -std=c99 -DTESTS
+#-I$(INC_DIR) 
 
 all: main
 
